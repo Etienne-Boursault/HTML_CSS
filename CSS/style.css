@@ -1,13 +1,208 @@
-h1{
-    font-size: 16px;
-    color: chocolate;
+html {
+    font-family: "Lucida Grande", sans-serif;
 }
 
-p{
-    font-size: 16px;
-    color: burlywood;
+h1 {
+    color: red;
+    font-family: "Times New Roman", serif;
 }
 
-.strike{
-    text-decoration: line-through;
+ul {
+    margin-left: 15px;
+    background-color: lightblue;
+}
+
+/*Un premier commentaire CSS*/
+p {
+    color: blue;
+    border: 2px solid orange;
+    width: 100%;
+    background-color: yellow;
+}
+
+/*
+Un autre commentaire
+mais sur plusieurs
+lignes cette fois
+ */
+p:hover {
+    color: orange;
+}
+
+/* Utiliser plusieurs sélecteurs CSS à la suite */
+p a {
+    background-color: yellow;
+}
+
+/* Le texte de nos liens sera vert et gras */
+a {
+    color: green;
+    font-weight: bold;
+}
+
+/* Sélecteur universel */
+* {
+    color: black;
+}
+
+/* Apllication d'un style à plusieurs éléments */
+h2, li {
+    color: blue;
+}
+
+body {
+    background-color: lightblue;
+}
+
+/* Appliquer des styles aux enfants directs d’un autre élément */
+body > a {
+    background-color: yellowgreen;
+}
+
+/* Applique une couleur de fond jaune à tout élément a suivant directement un élément p */
+p + a {
+    font-style: italic;
+}
+
+tr {
+    margin-left: 50px;
+}
+
+td {
+    color: black;
+}
+
+div {
+    color: white; /*Textes des éléments dans les div blancs par héritage*/
+    background-color: purple; /*Les div auront un fond violet*/
+}
+
+span {
+    font-weight: bold;
+    background-color: yellow;
+    color: black;
+}
+
+strong, span {
+    background-color: orange;
+}
+
+/*Applique une couleur de fond jaune à tout élément ol suivant un élément h2 et de même niveau*/
+h2 ~ ol {
+    background-color: yellow;
+}
+
+table, td {
+    border: solid black 1px;
+}
+
+/* Un id est unique */
+#orange {
+    color: orange;
+}
+
+#gros {
+    font-size: 24px;
+}
+
+#rouge {
+    color: red;
+}
+
+#marge {
+    margin-left: 15px;
+}
+
+/* Cette définition contenant !important s'applique par dessus toutes les autres */
+#marron {
+    color: brown !important;
+}
+
+#cp {
+    margin: 0 auto; /*Permet de centrer les div dans leur élément parent (body ici)*/
+}
+
+/* Mais une class ne l'est pas */
+.vert {
+    color: green;
+}
+
+.bleu {
+    color: blue;
+}
+
+.souligne {
+    text-decoration: underline;
+}
+
+.italique {
+    font-style: italic;
+}
+
+.grosorange {
+    color: orange;
+    font-size: 24px;
+}
+
+/*
+Ce sélecteur étant plus précis que celui du dessus, c'est celui-ci qui est privilégié
+ */
+ul .petit {
+    font-size: 12px;
+}
+
+.herite {
+    margin-left: inherit;
+}
+
+.grandemarge {
+    margin-left: 50px;
+}
+
+.initiale {
+    margin-left: initial;
+    font-family: initial;
+}
+
+.sansparametres {
+    margin-left: unset;
+    font-family: unset;
+}
+
+.reverse {
+    margin-left: revert;
+    font-family: revert;
+}
+
+.conteneur {
+    width: 50%; /*Définit la largeur des div à 50% de leur parent (body ici)*/
+    border: 1px solid black;
+    background-color: lightgrey;
+    margin: 0 auto;
+}
+
+.gras {
+    font-weight: bold;
+}
+
+.fondjaune {
+    background-color: yellow;
+}
+
+.paragraphe {
+    border: 2px solid red;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1em;
+    line-height: 1.5em;
+    font-family: Verdana, serif;
+}
+
+#p1 {
+    padding: 5px 20px 30px 20px;
+    font: 1em Verdana;
+}
+#p2 {
+    padding: 5px 20px 30px;
 }

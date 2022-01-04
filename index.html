@@ -1,65 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>This is the Pierre Giraud Tutorial</title>
-        <link rel="stylesheet" href="CSS/style.css">
-    </head>
-    <body>
-        <h1 id="titre">This is the <span class="strike">OpenClassRoom</span> Pierre Giraud Tutorial</h1>
-        <p>This is my first paragraph written in HTML</p>
-        <strong>HTML: </strong>HyperText Markup Language<br>
-        <strong>CSS: </strong>Cascading StyleSheets<br>
-        La balise &lt;br&gt; est une balise orpheline<br>
-        <strong>a: </strong>anchor<br>
-        <strong>href: </strong>hypertexte reference<br>
-        <strong>src: </strong>source<br>
-        <strong>alt: </strong>alternative<br>
-        <!--Un commentaire-->
-        <strong>h: </strong>heading<br>
-        <strong>p: </strong>paragraph<br>
-        <strong>br: </strong>break<hr>
-        <strong>hr: </strong>horizontal line running<br>
-        <strong>pre: </strong>No pre-format, useful for debugging<br>
-        <pre>
-            This is a weird                  display
-        </pre>
-        Different kind of spaces<br>
-        <strong>no spaces: </strong>abcdef<br>
-        <strong>spacebar: </strong>a b c d e f<br>
-        <strong>thin space: </strong>a&thinsp;b&thinsp;c&thinsp;d&thinsp;e&thinsp;f<br>
-        <strong>non breaking space: </strong>a&nbsp;b&nbsp;c&nbsp;d&nbsp;e&nbsp;f<br>
-        <strong>en space (double spaces): </strong>a&ensp;b&ensp;c&ensp;d&ensp;e&ensp;f<br>
-        <strong>em space (4 times spaces): </strong>a&emsp;b&emsp;c&emsp;d&emsp;e&emsp;f<br>
-        <strong>strong: </strong>something important for SEO<br>
-        <strong>em: </strong><em>emphasis</em><br>
-        <strong>mark: </strong><mark>essentially used for highlighting</mark><br>
-        <strong>ul: </strong>Unordered list<br>
-        <strong>li: </strong>list item<br>
-        <ul>
-            <li>Number 1</li>
-            <li>Number 2</li>
-            <li>Number 3</li>
-        </ul>
-        <strong>ol: </strong>Ordered list<br>
-        <ol>
-            <li>Number 1</li>
-            <li>Number 2</li>
-            <li>Number 3</li>
-        </ol>
-        <strong>dl: </strong>description list<br>
-        <strong>dt: </strong>description item<br>
-        <strong>dd: </strong>description definition<br>
-        <dl>
-            <dt>Description</dt>
-            <dd>Definition</dd>
-        </dl>
-        <strong>href: </strong>hypertext reference<a href="https://www.wikipedia.com" target="_blank">Wikipedia</a><br>
-        <strong>Link to another part of the page <a href="#titre">Titre</a></strong><br>
-        <strong>Mailto: </strong><a href="mailto:moi">Moi</a><br>
-        <strong>Download: </strong><a href="CSS/style.css" download="CSS/style.css">CSS</a><br>
-        <strong>&amp;: </strong>&amp;amp<br>
-        <strong>&lt;: </strong>&amp;lt<br>
-        <strong>&gt;: </strong>&amp;gt<br>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <title>This is the Pierre Giraud Tutorial</title>
+    <link href="CSS/style.css" rel="stylesheet">
+    <!-- Une convention en HTML va être de toujours préciser notre élément style après notre élément link dans le code
+     pour ne pas s’embrouiller et c’est la raison pour laquelle on retient généralement qu’à sélecteur égal les styles
+     définis dans l’élément style sont prioritaires sur ceux définis dans un fichier CSS séparé. -->
+    <style>
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1 id="orange">Les bases du CSS</h1>
+<p style="font-size: 22px">Un premier paragraphe avec un <a href="http://wikipedia.org">lien</a></p>
+<p>Le code CSS renseigné ici applique une couleur bleue à tous les paragraphes par défaut grâce au sélecteur "p" ou
+    orange lorsqu'un utilisateur passe sa souris sur un paragraphe grâce au sélecteur "p:hover"</p>
+<p class="bleu">Un autre paragraphe</p>
+<p class="bleu" style="color: brown">Un autre paragraphe</p>
+<p class="bleu" id="marron" style="color: yellow">Un autre paragraphe</p>
+<a href="#">Je pense que c'est un lien</a>
+<h2>Une liste</h2>
+<ul>
+    <li><a class="grosorange petit" href="#">Élément de liste 1</a></li>
+    <li class="vert souligne italique" id="marge">Élément de liste 2</li>
+</ul>
+<ol>
+    <li><a href="#">Élément de liste 3</a></li>
+    <li class="vert souligne italique" id="rouge">Élément de liste 4</li>
+</ol>
+<p id="gros">Encore un autre paragraphe</p>
+<p class="bleu vert">Je commence à avoir trop de paragraphes, et c'est vert, parce que c'est la dernière classe dans le
+    code</p>
+<table>
+    <thead>
+    <tr>Sélecteur CSS</tr>
+    <tr>Signification</tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>*</td>
+        <td>Sélectionne tous les éléments</td>
+    </tr>
+    <tr>
+        <td>E,F</td>
+        <td>Sélectionne tous les éléments de type E et de type F</td>
+    </tr>
+    <tr>
+        <td>E F</td>
+        <td>Sélectionne tous les éléments F à l’intérieur des éléments E</td>
+    </tr>
+    <tr>
+        <td>E > F</td>
+        <td>Sélectionne les éléments F enfants directs des éléments E</td>
+    </tr>
+    <tr>
+        <td>E + F</td>
+        <td>Sélectionne tout élément F placé directement après un élément E</td>
+    </tr>
+    <tr>
+        <td>E~F</td>
+        <td>Sélectionne tout élément F placé après un élément E dans la page</td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+<h2>Valeur d'héritage</h2>
+<table>
+    <thead>
+    <tr>Valeur</tr>
+    <tr>Signification</tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td class="herite">inherit</td>
+        <td>Sert à indiquer que la valeur de propriété appliquée à l’élément sélectionné est la même que celle de
+            l’élément parent
+        </td>
+    </tr>
+    <tr>
+        <td class="initiale">initial</td>
+        <td>Sert à indiquer que la valeur de propriété appliquée à l’élément sélectionné est la même que celle définie
+            pour cet élément dans la feuille de style par défaut du navigateur
+        </td>
+    </tr>
+    <tr>
+        <td class="sansparametres">unset</td>
+        <td>Permet de réinitialiser la propriété à sa valeur naturelle, ce qui signifie que si la propriété est
+            naturellement héritée elle se comporte comme si on avait donné la valeur inherit. Dans le cas contraire,
+            son comportement sera le même que si on lui avait donné la valeur initial
+        </td>
+    </tr>
+    <tr>
+        <td class="reverse">revert</td>
+        <td>Réinitialise la propriété à la valeur qu’elle aurait eue si aucun style ne lui avait été appliqué. La
+            valeur de la propriété va donc être fixée à celle de la feuille de style de l’utilisateur si elle est
+            définie ou sera récupérée dans la feuille de style par défaut de l’agent utilisateur
+        </td>
+    </tr>
+    </tbody>
+</table>
+<ul class="grandemarge">
+    <li class="herite">Avec héritage</li>
+    <li>Sans héritage</li>
+</ul>
+<ul class="grandemarge initiale">
+    <li>Avec initial (retour à l'état initial)</li>
+</ul>
+<ul class="grandemarge">
+    <li class="sansparametres">Avec unset</li>
+    <li>Sans unset</li>
+</ul>
+<ul class="grandemarge">
+    <li class="reverse">Avec revert</li>
+    <li>Sans revert</li>
+</ul>
+<hr>
+<h1>Les divs et span</h1>
+<h2>Span</h2>
+<p>l’élément div est un élément de niveau block tandis que l’élément span est un élément de niveau inline. </p>
+<p>L’élément span va lui servir de conteneur à un autre niveau : il va servir de conteneur interne à un élément plutôt
+    que de conteneur pour plusieurs éléments. </p>
+<div class="conteneur" id="cp">
+    <p>Un paragraphe</p>
+    <p>Deux paragraphes</p>
+    <ul>
+        <li>Une liste</li>
+        <li>Deux <span class="gras">listes</span></li>
+    </ul>
+</div>
+<p><span class="gras fondjaune">Trois</span> paragraphes</p>
+<div>
+    <p class="gras">Quatre paragraphes</p>
+</div>
+<hr>
+<h1>Inline vs block</h1>
+<p>Les éléments de type inline vont posséder les caractéristiques suivantes qui vont les différencier des éléments de
+    type block</p>
+<ul>
+    <li>Un élément de type inline ne va occuper que la largeur nécessaire à l’affichage de son contenu par défaut</li>
+    <li>Les éléments de type inline vont venir essayer de se placer en ligne, c’est-à-dire à côté (sur la même ligne)
+        que l’élément qui les précède dans le code HTML
+    </li>
+    <li>Un élément de type inline peut contenir d’autres éléments de type inline mais ne devrait pas contenir d’éléments
+        de type block
+    </li>
+</ul>
+<p>Les éléments de type block vont posséder les caractéristiques de disposition suivantes :</p>
+<ul>
+    <li>Un élément de type block va toujours prendre toute la largeur disponible au sein de son élément parent (ou
+        élément conteneur)
+    </li>
+    <li>Un élément de type block va toujours « aller à la ligne » (créer un saut de ligne avant et après l’élément),
+        c’est-à-dire occuper une nouvelle ligne dans une page et ne jamais se positionner à côté d’un autre élément par
+        défaut
+    </li>
+    <li>Un élément de type block peut contenir d’autres éléments de type block ou de type inline.</li>
+</ul>
+<p>L'élément p est un élément de type block</p>
+<p>L'élément <strong>strong</strong> est de type inline, tout comme <span>span</span></p>
+<div class="conteneur">
+    <p>L'élément p est un élément de type block</p>
+    <p>L'élément <strong style="display: inherit">strong (qui ici à pris les propriétés de son parent)</strong> est de
+        type inline, tout comme <span>span</span></p>
+</div>
+<hr>
+<h1>Short hand vs Long hand</h1>
+<p class="paragraphe" id="p1">Paragraphe 1</p>
+<p class="paragraphe" id="p2">Paragraphe 2</p>
+<table>
+    <thead>
+    <tr>Short Hand</tr>
+    <tr>Equivalent Long Hand</tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>font</td>
+        <td>font-style, font-variant, font-weight, font-size, line-height, font-family</td>
+    </tr>
+    <tr>
+        <td>border</td>
+        <td>border-width, border-style, border-color</td>
+    </tr>
+    <tr>
+        <td>margin</td>
+        <td>margin-top, margin-right, margin-bottom, margin-left</td>
+    </tr>
+    <tr>
+        <td>padding</td>
+        <td>padding-top, padding-right, padding-bottom, padding-left</td>
+    </tr>
+    <tr>
+        <td>background</td>
+        <td>background-image, background-position, background-size, background-repeat, background-origin,
+            background-clip, background-attachment, background-color
+        </td>
+    </tr>
+    <tr>
+        <td>transition</td>
+        <td>transition-property, transition-duration, transition-timing-function, transition-delay</td>
+    </tr>
+    <tr>
+        <td>animation</td>
+        <td>animation-name, animation-duration, animation-timing-function, animation-delay, animation-iteration-count,
+            animation-direction, animation-fill-mode, animation-play-state
+        </td>
+    </tr>
+    <tr>
+        <td>flex</td>
+        <td>flex-shrink, flex-grow, flex-basis</td>
+    </tr>
+    </tbody>
+</table>
+</body>
 </html>
