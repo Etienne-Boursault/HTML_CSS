@@ -1,309 +1,258 @@
-p, span {
-    font-size: 1em;
-}
-
 .p1 {
-    background-color: lightblue;
-    width: 400px;
-    height: 100px;
+    background-color: #0CC;
 }
 
-.p2 {
-    background-color: lightgreen;
+.enligne {
+    display: inline;
+}
+
+.st1, .a1 {
+    background-color: #0CC;
+}
+
+.bloc {
+    display: block;
 }
 
 .s1 {
-    background-color: orange;
-    width: 400px;
-    height: 100px;
+    width: 200px;
+    background-color: #0CC;
 }
 
-.s2 {
-    background-color: yellow;
+.ib {
+    display: inline-block;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.nonaffiche {
+    display: none;
+}
+
+.static {
+    position: static; /*Valeur par défaut*/
+}
+
+.gauche {
+    top: 100px;
+    left: 100px; /*La propriété ne s'applique pas sur un élément static*/
 }
 
 .d1 {
-    width: 50%;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
     border: 1px solid black;
-    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.relatif {
+    position: relative;
+}
+
+.haut {
+    top: 60px; /*Elément décalé de 50px vers le bas p/r à une origine*/
+}
+
+.gauche2 {
+    left: 150px; /*Element décalé de 150px vers la droite p/r à une origine*/
+}
+
+.droite {
+    right: 30px; /*Element décalé de 30px vers la gauchr p/r à une origine*/
+}
+
+.bleu {
+    background-color: #0AF;
+}
+
+.vert {
+    background-color: #0FA;
 }
 
 .d2 {
-    width: 400px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
+    display: inline-block;
     border: 1px solid black;
+    box-sizing: border-box;
+}
+
+.conteneur {
+    width: 100%;
+    height: 200px;
+    display: block;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: #DD6; /*Jaune*/
+}
+
+.absolu {
+    position: absolute;
+}
+
+.bas {
+    bottom: 20px;
+}
+
+.d3, .p2 {
+    margin: 0;
+}
+
+.p2 {
+    text-align: justify;
+}
+
+.carre {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.droite2 {
+    right: 0;
+}
+
+.decale {
+    right: 75px;
+    top: 25px;
+}
+
+.z100 {
+    z-index: 100;
+}
+
+
+.d4 {
+    height: 40px;
+    width: 100%;
+    background-color: #0FA; /*Vert*/
+}
+
+.flottant {
+    width: 200px;
+    height: 100px;
+    float: left;
+    background-color: #0AF; /*Bleu*/
 }
 
 .p3 {
-    background-color: lightblue;
-    width: 400px;
-    height: 100px;
-}
-
-.p4 {
-    background-color: lightgreen;
-    width: 100%;
-    height: 25%;
-}
-
-.p5 {
-    background-color: orange;
-    width: 200px;
-    height: 50px;
-}
-
-.p6 {
-    background-color: yellow;
-    width: 50%;
-    height: 25%;
-}
-
-.d3 {
-    width: 300px;
-    height: 200px;
-    border: 1px solid black;
-}
-
-.p7 {
-    background-color: lightblue;
-    width: 200px;
-    height: 60px;
-    overflow: scroll;
-}
-
-.p8 {
-    background-color: lightgreen;
-    width: 100%;
-    height: 25%;
-}
-
-.d4 {
-    width: 50%;
-    height: 200px;
-    border: 1px solid black;
-}
-
-.p9 {
-    background-color: lightblue;
-    width: 100%;
-    height: 50%;
-    border: 10px solid purple;
-}
-
-.p10 {
-    background-color: lightgreen;
-    width: 100%;
-    height: 25%;
-    padding: 20px;
-    margin: 10px;
-}
-
-.paragraphe1 {
-    background-color: lightgreen;
-    border: 1px solid black;
-    width: 200px;
-    padding: 20px;
-    margin: 20px 10px;
-}
-
-.p12, .p13, .p14 {
-    height: 50px;
-}
-
-.p11 {
-    border-width: 5px;
-    border-style: solid;
-    border-color: #09C;
-}
-
-.p12 {
-    padding: 20px;
-    border: 15px double #09C;
-}
-
-.p13 {
-    padding: 10px 50px 10px 100px;
-    background-color: #0C9;
-    border: 5px ridge #09C;
-}
-
-.p14 {
-    padding-left: 100px;
-    padding-bottom: 20px;
-    background-color: #0C9;
-    border: 5px outset #09C;
-}
-
-.ligne1 {
-    background-color: orange;
-}
-
-.s3 {
-    padding: 10px;
-}
-
-.titre2 {
-
-}
-
-body {
-    margin: 0;
-}
-
-.paragraphe2 {
-    margin: 0;
-    background-color: #0EA;
-}
-
-.p21 {
-    margin: 10px 20px 30px 40px;
-}
-
-
-.p22 {
-    margin: 20px;
-}
-
-.s21 {
-    margin: 100px;
-    background-color: yellow;
-}
-
-.p23 {
-    margin-right: 40px;
-    margin-bottom: 20px;
-    margin-left: 60px;
-}
-
-.p24 {
-    margin: 10px 50px;
-}
-
-.conteneur2 {
-    background-color: #0AE;
-    margin: 20px 0;
-}
-
-.p25 {
-    margin-top: 20px;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.p26 {
-    margin-bottom: 40px;
-    text-align: center;
-    margin: 0 auto;
-}
-
-.bordure {
-    border: 1px solid black;
+    background-color: #EE6; /*Jaune*/
 }
 
 .d5 {
-    width: 80%;
-    background-color: #777;
+    background-color: #0AF; /*Bleu*/
     border: 1px solid black;
+    margin: 10px 0; /*10px de marge haute et basse*/
 }
 
-.paragraphe3 {
-    width: 100%;
-    background-color: #0CC;
-    padding: 20px;
-    border: 10px solid black;
+.p4 {
+    background-color: #0FA; /*Vert*/
+    clear: both;
 }
 
-.p32 {
-    box-sizing: content-box;
+.st2 {
+    background-color: #DD6; /*Jaune*/
 }
 
-.p33 {
-    box-sizing: border-box;
+.w25 {
+    width: 25%;
+}
+
+.h100 {
+    height: 100px;
+}
+
+.gauche3 {
+    float: left;
+}
+
+.droite3 {
+    float: right;
+}
+
+.interne {
+    background-color: #DD6; /*Jaune*/
+}
+
+.w50 {
+    width: 50px;
+}
+
+.w100 {
+    width: 100px;
+}
+
+.h50 {
+    height: 50px;
+}
+
+.h100 {
+    height: 100px;
+}
+
+.h150 {
+    height: 150px;
+}
+
+.cleared {
+    clear: left;
+}
+
+.p5 {
+    background-color: #0FA; /*Vert*/
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .d6 {
     width: 80%;
-    margin: 20px auto; /*Centre les div dans la page*/
-    background-color: #777; /*Fond gris*/
-}
-
-.paragraphe4 {
-    width: 100%;
-    height: 100%;
+    border: 1px solid black;
+    background-color: #0AF;
+    margin: 50px auto;
     box-sizing: border-box;
-    text-align: center; /*Texte centré horizontalement*/
-    line-height: 100px; /*Texte centré verticalement*/
-    background-color: #0CC; /*Fond bleu vert*/
+    position: relative;
 }
 
-.bordure {
-    border: 2px solid black;
+.d6::after {
+    display: table;
+    content: "";
+    clear: both;
 }
 
-.arrondi1 {
-    border-radius: 100px / 20px;
+#p1 {
+    display: none;
+    position: absolute;
+    left: 100px;
+    float: left;
 }
 
-.arrondi2 {
-    border-radius: 50px; /*Identique à border-radius: 50px/50px*/
+#p2 {
+    display: inline-block;
+    position: absolute;
+    right: 50px;
+    float: left;
 }
 
-.arrondi3 {
-    border-radius: 25%; /*Identique à border-radius: 25%/25%*/
+#p3 {
+    display: inline-block;
+    position: relative;
+    right: 50px;
+    float: left;
 }
 
-.carre {
-    width: 200px;
-    height: 200px;
-}
-
-.carre p {
-    line-height: 200px;
-}
-
-.arrondi4 {
-    border-radius: 50%;
-}
-
-.arrondi5 {
-    border-radius: 25% / 50%;
-}
-
-
-.arrondi6 {
-    border-radius: 50px 25px;
-}
-
-.arrondi7 {
-    border-radius: 50px 25px / 50px 25px;
-}
-
-.arrondi8 {
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 50px;
-    border-top-right-radius: 25px;
-    border-bottom-left-radius: 25px;
-}
-
-.arrondi9 {
-    border-radius: 100px 30px/50px 70px;
-}
-
-.arrondi10 {
-    border-radius: 40px 100px 10px/ 50px 70px;
-}
-
-.arrondi11 {
-    line-height: 50px;
-    border-top-left-radius: 50px;
-    border-bottom-right-radius: 40px 80px;
-    border-top-right-radius: 100px 10px;
-}
-
-.arrondi12{
-    border-radius : 100px 250px 200px 300px / 10px 30px 70px 80px;
-}
-.arrondi13{
-    border-radius : 80px 200px 160px 240px / 8px 24px 56px 64px;
+#p4 {
+    display: inline-block;
+    position: relative;
+    right: 50px;
 }
