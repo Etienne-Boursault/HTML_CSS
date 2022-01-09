@@ -2,227 +2,93 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Création de tableaux HTML</title>
+    <title>Sélecteurs CSS complexes</title>
     <link href="CSS/style.css" rel="stylesheet">
 </head>
 <body>
-<h1>42. Créer des tableaux en HTML</h1>
-<h2>Créer des tableaux avec l’élément HTML table</h2>
-<h3>Créer un tableau simple en HTML</h3>
-<table class="t1">
-    <tr>
-        <th class="th1">Nom</th>
-        <th class="th1">Prénom</th>
-        <th class="th1">Age</th>
-        <th class="th1">Mail</th>
-    </tr>
-    <tr>
-        <td class="td1">Giraud</td>
-        <td class="td1">Pierre</td>
-        <td class="td1">28</td>
-        <td class="td1">pierre.giraud@edhec.com</td>
-    </tr>
-    <tr>
-        <td class="td1">Joly</td>
-        <td class="td1">Pauline</td>
-        <td class="td1">27</td>
-        <td class="td1">pjl@gmail.com</td>
-    </tr>
-</table>
-<h1>43. Structurer un tableau HTML</h1>
-<h2>Création d’un tableau structuré en HTML</h2>
-<table class="t1">
-    <tfoot>
-    <tr>
-        <td class="td1">Total</td>
-        <td class="td1">1300</td>
-        <td class="td1">5650</td>
-        <td class="td1">9950</td>
-    </tr>
-    </tfoot>
-    <tbody>
-    <tr>
-        <td class="td1">Page 1</td>
-        <td class="td1">100</td>
-        <td class="td1">250</td>
-        <td class="td1">350</td>
-    </tr>
-    <tr>
-        <td class="td1">Page 2</td>
-        <td class="td1">1200</td>
-        <td class="td1">5400</td>
-        <td class="td1">6600</td>
-    </tr>
-    </tbody>
-    <thead>
-    <tr>
-        <th class="th1">Page</th>
-        <th class="th1">Nb visites 2017</th>
-        <th class="th1">Nb visites 2018</th>
-        <th class="th1">Total</th>
-    </tr>
-    </thead>
-</table>
-<h2>Fusionner des cellules entre elles avec colspan et rowspan</h2>
-<table class="t1">
-    <caption>Informations participants</caption>
-    <thead>
-    <tr>
-        <th class="th1">Nom</th>
-        <th class="th1">Prénom 1</th>
-        <th class="th1">Prénom 2</th>
-        <th class="th1">Prénom 3</th>
-        <th class="th1">Adresse mail 1</th>
-        <th class="th1">Adresse mail 2</th>
-        <th class="th1">Inscrit ?</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td class="td1">Giraud</td>
-        <td class="td1">Pierre</td>
-        <td class="td1" colspan="2">Victor</td>
-        <td class="td1" colspan="2">pierre.giraud@edhec.com</td>
-        <td class="td1" rowspan="2">Oui</td>
-    </tr>
-    <tr>
-        <td class="td1">Joly</td>
-        <td class="td1" colspan="3">Pauline</td>
-        <td class="td1">pjl@gmail.com</td>
-        <td class="td1">jolyp@hotmail.fr</td>
-    </tr>
-    </tbody>
-</table>
-<h2>43. Utiliser les éléments col et colgroup pour préparer la mise en forme des colonnes d’un tableau</h2>
-<table class="t1">
-    <caption>Informations participants</caption>
-    <colgroup>
-        <col class="info" span="3">
-        <col>
-    </colgroup>
-    <thead>
-    <tr>
-        <th class="th1">Nom</th>
-        <th class="th1">Prénom</th>
-        <th class="th1">Adresse mail</th>
-        <th class="th1">Inscrit ?</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td class="td1">Giraud</td>
-        <td class="td1">Pierre</td>
-        <td class="td1">pierre.giraud@edhec.com</td>
-        <td class="td1" rowspan="2">Oui</td>
-    </tr>
-    <tr>
-        <td class="td1">Joly</td>
-        <td class="td1">Pauline</td>
-        <td class="td1">pjl@gmail.com</td>
-    </tr>
-    </tbody>
-</table>
-<h1>44. Mettre en forme un tableau HTML avec du CSS</h1>
-<h2>Les propriétés border-collapse et border-spacing</h2>
-<table class="t2">
-    <tr>
-        <th class="th1">Nom</th>
-        <th class="th1">Prénom</th>
-    </tr>
-    <tr>
-        <td class="td1">Giraud</td>
-        <td class="td1">Pierre</td>
-    </tr>
-</table>
-<br>
-<table class="t3">
-    <tr>
-        <th class="th1">Nom</th>
-        <th class="th1">Prénom</th>
-    </tr>
-    <tr>
-        <td class="td1">Joly</td>
-        <td class="td1">Pauline</td>
-    </tr>
-</table>
-<br>
-<table class="t1 t2">
-    <tr>
-        <th class="th1">Nom</th>
-        <th class="th1">Prénom</th>
-    </tr>
-    <tr>
-        <td class="td1">Giraud</td>
-        <td class="td1">Pierre</td>
-    </tr>
-    <tr>
-        <td class="td1">Joly</td>
-        <td class="td1">Pauline</td>
-    </tr>
-</table>
-<h2>Contrôler la largeur des colonnes avec table-layout</h2>
-<table class="t4 t5">
-    <tr>
-        <th class="th1">Nom</th>
-        <th class="th1">Prénom</th>
-        <th class="th1">Mail</th>
-    </tr>
-    <tr>
-        <td class="td1">Giraud</td>
-        <td class="td1">Pierre</td>
-        <td class="td1">pierre.giraud@edhec.com</td>
-    </tr>
-</table>
-<h2>Définir l’affichage des cellules vides d’un tableau avec empty-cells</h2>
+<h1>54. Les sélecteurs CSS d’attributs</h1>
+<h2>Sélectionner un élément selon qu’il possède un attribut</h2>
+<p>Un <a href="#" target="_blank">lien</a> vide</p>
+<p class="test">Un autre <a href="#">lien</a> vide</p>
+<p>Un troisième <a href="#">lien</a> vide</p>
+<h2>Sélectionner un élément selon qu’il possède un attribut avec une valeur exactement</h2>
+<p>Un <a href="#" target="_blank">lien</a> vide</p>
+<p class="test">Un autre <a href="#" rel="follow">lien</a> vide</p>
+<p>Un troisième <a href="#" rel="nofollow">lien</a> vide</p>
+<h2>Sélectionner un élément selon qu’il possède un attribut contenant une sous-valeur distincte (séparée du reste par un
+    espace)</h2>
+<img alt="Un emoji content" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/emoji-smile.png">
+<img alt="Un coucher de soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
+<img alt="Coucher-de-soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
+<h2>Sélectionner un élément selon qu’il possède un attribut commençant par une certaine sous-valeur</h2>
+<div class="set1">
+    <img alt="Une emoticone content" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/emoji-smile.png">
+    <img alt="Un coucher de soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
+    <img alt="Un-Coucher-de-soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
+</div>
+<div class="set2">
+    <img alt="Une emoticone content" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/emoji-smile.png">
+    <img alt="Un coucher de soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
+    <img alt="Un-Coucher-de-soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
+</div>
+<h2>Sélectionner un élément selon qu’il possède un attribut se finissant par une certaine sous-valeur</h2>
+<p>Lien vers <a href="https://www.pierrre-giraud.fr">mon site .fr</a></p>
+<p>Lien vers <a href="https://www.pierrre-giraud.com">mon site .com</a></p>
+<p>Lien vers <a href="https://fr.wikipedia.org/">wikipedia.org</a></p>
+<h2>Sélectionner un élément selon qu’il possède un attribut possédant une valeur parmi d’autres</h2>
+<p>Un <a href="#">lien</a> vide</p>
+<p>Un autre <a href="#" rel="follow">lien</a> vide</p>
+<p>Un troisième <a href="#" rel="nofollow">lien</a> vide</p>
+<h2>Rendre ses sélecteurs d’attributs insensibles à la casse</h2>
+<div class="set3">
+    <p>Un <a href="https://www.pierre-giraud.com">lien</a></p>
+    <p>Un autre <a href="https://www.Pierre-giraud.com">lien</a></p>
+</div>
+<div class="set4">
+    <p>Un <a href="https://www.pierre-giraud.com">lien</a></p>
+    <p>Un autre <a href="https://www.Pierre-giraud.com">lien</a></p>
+</div>
+<h1>55. Les pseudo-classes CSS</h1>
+<h2>Les pseudo-classes :hover, :visited, :active et :link</h2>
+<div class="d1"><p>Passez sur moi !</p></div>
+<p>Un paragraphe avec un <a class="a1" href="#">lien</a></p>
+<h2>Les pseudo-classes :first-child, :first-of-type, :last-child et :last-of-type</h2>
+<h4>Les pseudo-classes</h4>
+<p class="p1">Ce paragraphe est le premier élément p du body</p>
+<div>
+    <span>Ce span est le premier enfant du 1er div</span>
+    <p class="p1">Premier élément p dans le 1er div</p>
+    <p class="p1">Deuxième élément p du div</p>
+    <p class="p1">Ce paragraphe est le dernier enfant du 1er div</p>
+</div>
+<p class="p1">Encore un paragaphe</p>
+<div>
+    <p class="p1">Ce paragraphe est le premier enfant du 2è div</p>
+    <p class="p1">Ce paragraphe est le dernier enfant du 2è div</p>
+</div>
+<p class="p1">Ce paragraphe est le dernier élément du body</p>
+<h1>56. Les pseudos-éléments CSS</h1>
+<h2>Insérer du contenu avant ou après le contenu d’un élément HTML</h2>
+<div class="d2">
+    <p class="p2">Un premier paragraphe</p>
+    <p class="p3">Un deuxième paragraphe</p>
+</div>
+<p class="p4">Un troisième paragraphe hors du div</p>
+<h2>Sélectionner la première lettre d’un élément en CSS</h2>
+<p class="p5">Le jour de ses onze ans, Harry Potter, un orphelin élevé...</p>
+<h2>Sélectionner la première ligne d’un élément en CSS</h2>
+<p class="p6">Le jour de ses onze ans, Harry Potter, un orphelin élevé par un oncle et une tante qui le détestent, voit
+    son existence bouleversée. Un géant vient le chercher pour l'emmener à Poudlard, la célèbre école de sorcellerie où
+    une place l'attend depuis toujours. Voler sur des balais, jeter des sorts, combattre les Trolls : Harry Potter se
+    révèle un sorcier vraiment doué. Mais quel mystère entoure sa naissance et qui est l'effroyable V..., le mage dont
+    personne n'ose prononcer le nom ?</p>
+<h2>Cibler la partie d’un élément déjà sélectionnée par l’utilisateur</h2>
+<p class="p7">Le jour de ses onze ans, Harry Potter, un orphelin élevé par un oncle et une tante qui le détestent, voit
+    son existence bouleversée. Un géant vient le chercher pour l'emmener à Poudlard, la célèbre école de sorcellerie où
+    une place l'attend depuis toujours. Voler sur des balais, jeter des sorts, combattre les Trolls : Harry Potter se
+    révèle un sorcier vraiment doué. Mais quel mystère entoure sa naissance et qui est l'effroyable V..., le mage dont
+    personne n'ose prononcer le nom ?</p>
 
-
-<table class="t6 t8">
-    <tr>
-        <th class="th1">Nom</th>
-        <th class="th1">Prénom</th>
-        <th class="th1">Mail</th>
-    </tr>
-    <tr>
-        <td class="td1">Giraud</td>
-        <td class="td1">Pierre</td>
-        <td class="td1"></td>
-    </tr>
-</table>
-<table class="t7 t8">
-    <caption class="cap1">Info utilisateurs</caption>
-    <tr>
-        <th class="th1">Nom</th>
-        <th class="th1">Prénom</th>
-        <th class="th1">Mail</th>
-    </tr>
-    <tr>
-        <td class="td1">Giraud</td>
-        <td class="td1">Pierre</td>
-        <td class="td1"></td>
-    </tr>
-</table>
-<h2>Aligner le contenu des cellules d’un tableau avec vertical-align</h2>
-<table class="t9">
-    <thead>
-    <tr>
-        <th class="th2">Nom</th>
-        <th class="th2">Prénom</th>
-        <th class="th2">Mail</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td class="td2">Giraud</td>
-        <td class="td2">Pierre Victor Raphael</td>
-        <td class="td2">pierre.giraud@edhec.com</td>
-    </tr>
-    <tr>
-        <td class="td2">Joly - Dechand</td>
-        <td class="td2">Pauline</td>
-        <td class="td2">pjl@gmail.com</td>
-    </tr>
-    </tbody>
-</table>
 
 </body>
 </html>
