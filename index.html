@@ -2,93 +2,141 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sélecteurs CSS complexes</title>
+    <title>Formulaires HTML</title>
     <link href="CSS/style.css" rel="stylesheet">
 </head>
 <body>
-<h1>54. Les sélecteurs CSS d’attributs</h1>
-<h2>Sélectionner un élément selon qu’il possède un attribut</h2>
-<p>Un <a href="#" target="_blank">lien</a> vide</p>
-<p class="test">Un autre <a href="#">lien</a> vide</p>
-<p>Un troisième <a href="#">lien</a> vide</p>
-<h2>Sélectionner un élément selon qu’il possède un attribut avec une valeur exactement</h2>
-<p>Un <a href="#" target="_blank">lien</a> vide</p>
-<p class="test">Un autre <a href="#" rel="follow">lien</a> vide</p>
-<p>Un troisième <a href="#" rel="nofollow">lien</a> vide</p>
-<h2>Sélectionner un élément selon qu’il possède un attribut contenant une sous-valeur distincte (séparée du reste par un
-    espace)</h2>
-<img alt="Un emoji content" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/emoji-smile.png">
-<img alt="Un coucher de soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
-<img alt="Coucher-de-soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
-<h2>Sélectionner un élément selon qu’il possède un attribut commençant par une certaine sous-valeur</h2>
-<div class="set1">
-    <img alt="Une emoticone content" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/emoji-smile.png">
-    <img alt="Un coucher de soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
-    <img alt="Un-Coucher-de-soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
-</div>
-<div class="set2">
-    <img alt="Une emoticone content" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/emoji-smile.png">
-    <img alt="Un coucher de soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
-    <img alt="Un-Coucher-de-soleil" src="https://www.pierre-giraud.com/wp-content/uploads/2019/07/sunset.jpg">
-</div>
-<h2>Sélectionner un élément selon qu’il possède un attribut se finissant par une certaine sous-valeur</h2>
-<p>Lien vers <a href="https://www.pierrre-giraud.fr">mon site .fr</a></p>
-<p>Lien vers <a href="https://www.pierrre-giraud.com">mon site .com</a></p>
-<p>Lien vers <a href="https://fr.wikipedia.org/">wikipedia.org</a></p>
-<h2>Sélectionner un élément selon qu’il possède un attribut possédant une valeur parmi d’autres</h2>
-<p>Un <a href="#">lien</a> vide</p>
-<p>Un autre <a href="#" rel="follow">lien</a> vide</p>
-<p>Un troisième <a href="#" rel="nofollow">lien</a> vide</p>
-<h2>Rendre ses sélecteurs d’attributs insensibles à la casse</h2>
-<div class="set3">
-    <p>Un <a href="https://www.pierre-giraud.com">lien</a></p>
-    <p>Un autre <a href="https://www.Pierre-giraud.com">lien</a></p>
-</div>
-<div class="set4">
-    <p>Un <a href="https://www.pierre-giraud.com">lien</a></p>
-    <p>Un autre <a href="https://www.Pierre-giraud.com">lien</a></p>
-</div>
-<h1>55. Les pseudo-classes CSS</h1>
-<h2>Les pseudo-classes :hover, :visited, :active et :link</h2>
-<div class="d1"><p>Passez sur moi !</p></div>
-<p>Un paragraphe avec un <a class="a1" href="#">lien</a></p>
-<h2>Les pseudo-classes :first-child, :first-of-type, :last-child et :last-of-type</h2>
-<h4>Les pseudo-classes</h4>
-<p class="p1">Ce paragraphe est le premier élément p du body</p>
-<div>
-    <span>Ce span est le premier enfant du 1er div</span>
-    <p class="p1">Premier élément p dans le 1er div</p>
-    <p class="p1">Deuxième élément p du div</p>
-    <p class="p1">Ce paragraphe est le dernier enfant du 1er div</p>
-</div>
-<p class="p1">Encore un paragaphe</p>
-<div>
-    <p class="p1">Ce paragraphe est le premier enfant du 2è div</p>
-    <p class="p1">Ce paragraphe est le dernier enfant du 2è div</p>
-</div>
-<p class="p1">Ce paragraphe est le dernier élément du body</p>
-<h1>56. Les pseudos-éléments CSS</h1>
-<h2>Insérer du contenu avant ou après le contenu d’un élément HTML</h2>
-<div class="d2">
-    <p class="p2">Un premier paragraphe</p>
-    <p class="p3">Un deuxième paragraphe</p>
-</div>
-<p class="p4">Un troisième paragraphe hors du div</p>
-<h2>Sélectionner la première lettre d’un élément en CSS</h2>
-<p class="p5">Le jour de ses onze ans, Harry Potter, un orphelin élevé...</p>
-<h2>Sélectionner la première ligne d’un élément en CSS</h2>
-<p class="p6">Le jour de ses onze ans, Harry Potter, un orphelin élevé par un oncle et une tante qui le détestent, voit
-    son existence bouleversée. Un géant vient le chercher pour l'emmener à Poudlard, la célèbre école de sorcellerie où
-    une place l'attend depuis toujours. Voler sur des balais, jeter des sorts, combattre les Trolls : Harry Potter se
-    révèle un sorcier vraiment doué. Mais quel mystère entoure sa naissance et qui est l'effroyable V..., le mage dont
-    personne n'ose prononcer le nom ?</p>
-<h2>Cibler la partie d’un élément déjà sélectionnée par l’utilisateur</h2>
-<p class="p7">Le jour de ses onze ans, Harry Potter, un orphelin élevé par un oncle et une tante qui le détestent, voit
-    son existence bouleversée. Un géant vient le chercher pour l'emmener à Poudlard, la célèbre école de sorcellerie où
-    une place l'attend depuis toujours. Voler sur des balais, jeter des sorts, combattre les Trolls : Harry Potter se
-    révèle un sorcier vraiment doué. Mais quel mystère entoure sa naissance et qui est l'effroyable V..., le mage dont
-    personne n'ose prononcer le nom ?</p>
+<h1>59. Présentation des formulaires HTML</h1>
+<h2>Création d’un premier formulaire simple en HTML</h2>
+<form action="form.php" method="post">
+    <input type="text">
+    <input type="password">
+    <input type="email">
+</form>
+<br>
+<h2>Ajout d’indications sur les données attendues avec l’élément label</h2>
+<form action="form.php" method="post">
+    <div class="champ">
+        <label for="pseudo">Entrez un pseudonyme : </label>
+        <input id="pseudo" name="pseudo" type="text">
+    </div>
+    <div class="champ">
+        <label for="pass">Entrez un mot de passe : </label>
+        <input id="pass" name="pass" type="password">
+    </div>
+    <div class="champ">
+        <label for="mail">Entrez un mail : </label>
+        <input id="mail" name="mail" type="email">
+    </div>
+    <div class="champ">
+        <input type="submit" value="Envoyer">
+    </div>
+</form>
+<h1>60. Les éléments des formulaires</h1>
+<h2>Les éléments des formulaires HTML</h2>
+<table>
+    <thead>
+    <tr>
+        <td>Elément</td>
+        <td>Définition</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>form</td>
+        <td>Définit un formulaire</td>
+    </tr>
+    <tr>
+        <td>input</td>
+        <td>Définit un champ de données pour l’utilisateur</td>
+    </tr>
+    <tr>
+        <td>label</td>
+        <td>Définit une légende pour un élément input</td>
+    </tr>
+    <tr>
+        <td>textarea</td>
+        <td>Définit un champ de texte long</td>
+    </tr>
+    <tr>
+        <td>select</td>
+        <td>Définit une liste de choix</td>
+    </tr>
+    <tr>
+        <td>optgroup</td>
+        <td>Définit un groupe d’options dans une liste</td>
+    </tr>
+    <tr>
+        <td>option</td>
+        <td>Définit une option dans une liste</td>
+    </tr>
+    <tr>
+        <td>fieldset</td>
+        <td>Permet de regrouper les éléments d’un formulaire en différentes parties</td>
+    </tr>
+    <tr>
+        <td>legend</td>
+        <td>Ajoute une légende à un élément fieldset</td>
+    </tr>
+    </tbody>
+</table>
+<h2>Création d’un formulaire HTML complet</h2>
 
 
+<form method="post" action="form.php">
+    <fieldset>
+        <legend>Informations personnelles :</legend>
+        <div class="champ">
+            <label for="nom">Nom de famille :</label>
+            <input type="text" id="nom" name="nom" minlength="2" maxlength="25" required>
+        </div>
+        <div class="champ">
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" minlength="2" maxlength="25" required>
+        </div>
+        <div class="champ">
+            <label for="mail2">Adresse mail :</label>
+            <input type="email" id="mail2" name="mail" required>
+        </div>
+        <div class="champ">
+            <label for="age">Age :</label>
+            <input type="number" id="age" name="age" min="16" max="99">
+        </div>
+        <div class="champ">
+            <input type="radio" id="h" name="sexe" value="homme">
+            <label for="h">Homme</label>
+            <input type="radio" id="f" name="sexe" value="femme">
+            <label for="f">Femme</label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Compétences / expérience :</legend>
+        <div class="champ">
+            <input type="checkbox" id="html" name="competences" value="html">
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="competences" value="css">
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="competences" value="javascript">
+            <label for="js">JavaScript</label>
+            <input type="checkbox" id="php" name="competences" value="php">
+            <label for="php">PHP</label>
+            <input type="checkbox" id="sql" name="competences" value="sql">
+            <label for="sql">SQL</label>
+            <input type="checkbox" id="seo" name="competences" value="seo">
+            <label for="seo">SEO</label>
+        </div>
+        <div class="champ">
+            <textarea name="exp" placeholder="Décrivez une expérience pro" maxlength="500"></textarea>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Validation :</legend>
+        <div class="champ">
+            <label for="pass">Choisissez un mot de passe :</label>
+            <input type="password" minlength="8" required>
+        </div>
+        <input type="submit" value="Envoyer">
+    </fieldset>
+</form>
 </body>
 </html>
