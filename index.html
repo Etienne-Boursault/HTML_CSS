@@ -2,48 +2,392 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Responsive Design CSS</title>
+    <meta content="width=device-width, initial-scale=1.0, user-scalable=no" name="viewport">
+    <title>Modèles des grilles CSS</title>
     <link href="CSS/style.css" rel="stylesheet">
 </head>
 <body>
-<h1>72. Introduction au Responsive designe</h1>
-<h2>Définition rapide des Media Queries</h2>
+<h1>79. Introduction aux grilles CSS</h1>
+<h2>Première définition du modèle des grilles et différences avec le flexbox</h2>
 <div class="conteneur-flex_10">
-    <div class="element-flex_10">1</div>
-    <div class="element-flex_10">2</div>
-    <div class="element-flex_10">3</div>
+    <div class="d_10">1</div>
+    <div class="d_10">2</div>
+    <div class="d_10">3</div>
+    <div class="d_10">4</div>
+    <div class="d_10">5</div>
+    <div class="d_10">6</div>
 </div>
-<h1>73. La balise meta viewport</h1>
-<p>Dans la partie head</p>
-<h1>74. Utiliser les media queries pour créer un design responsive</h1>
-<h2>Définition des Media Queries</h2>
-<div class="conteneur-flex_20">
-    <div class="element-flex_20">1</div>
-    <div class="element-flex_20">2</div>
-    <div class="element-flex_20">3</div>
+<h2>Élément grille conteneur et éléments de grille</h2>
+<div class="conteneur-grid_11">
+    <div class="d_11">1</div>
+    <div class="d_11">2</div>
+    <div class="d_11">3</div>
+    <div class="d_11">4</div>
+    <div class="d_11">5</div>
+    <div class="d_11">6</div>
 </div>
-<h2>Utilisation pratique des Media Queries</h2>
-<div class="conteneur-flex_30">
-    <div class="sous-conteneur-flex_30">
-        <div class="element-flex_30">1</div>
-        <div class="element-flex_30">2</div>
-        <div class="element-flex_30">3</div>
-    </div>
-    <div class="sous-conteneur-flex_30">
-        <div class="element-flex_30">4</div>
-        <div class="element-flex_30">5</div>
-        <div class="element-flex_30">6</div>
-    </div>
+<h1>Créer une grille et définir des pistes de grille</h1>
+<div class="conteneur-grid_20">
+    <div class="d_2">1</div>
+    <div class="d_2">2</div>
+    <div class="d_2">3</div>
+    <div class="d_2">4</div>
+    <div class="d_2">5</div>
 </div>
-<h1>75. Images responsive</h1>
-<img srcset="images/voyage-s.jpg 400w,
-            images/voyage-m.jpg 600w,
-            images/voyage-l.jpg 800w"
-    sizes="(max-width: 576px) 380px,
-           (max-width:768px) 540px,
-            700px"
-     src="images/voyage-l.jpg"
-     alt="Voyage en Ecosse">
+<h2>Définir explicitement les colonnes et les rangées d’une grille</h2>
+<div class="conteneur-grid_21">
+    <div class="d_2">1</div>
+    <div class="d_2">2</div>
+    <div class="d_2">3</div>
+    <div class="d_2">4</div>
+    <div class="d_2">5</div>
+</div>
+<h4>grid-template-columns: repeat(3, 1fr)</h4>
+<div class="conteneur-grid_22">
+    <div class="d_2">1</div>
+    <div class="d_2">2</div>
+    <div class="d_2">3</div>
+    <div class="d_2">4</div>
+    <div class="d_2">5</div>
+</div>
+<h4>grid-template-columns: 100px repeat(3, 1fr 2fr);</h4>
+<div class="conteneur-grid_23">
+    <div class="d_2">1</div>
+    <div class="d_2">2</div>
+    <div class="d_2">3</div>
+    <div class="d_2">4</div>
+    <div class="d_2">5</div>
+</div>
+<h2>Règles de création et taille des pistes implicites</h2>
+<h4>grid-template-columns: 1fr 2fr 3fr;
+    grid-auto-rows: 100px</h4>
+<div class="conteneur-grid_24">
+    <div class="d_2">1</div>
+    <div class="d_2">2</div>
+    <div class="d_2">3</div>
+    <div class="d_2">4</div>
+    <div class="d_2">5</div>
+</div>
+<h2>Définir un intervalle de tailles valides pour les pistes d’une grille</h2>
+<h4>grid-template-columns: minmax(100px, 1fr) 2fr 3fr;
+    grid-auto-rows: minmax(80px, auto);</h4>
+<div class="conteneur-grid_25">
+    <div class="d_2">1</div>
+    <div class="d_2">2</div>
+    <div class="d_2">3</div>
+    <div class="d_2">4</div>
+    <div class="d_2">5</div>
+</div>
+<h1>81. Positionner des éléments dans une grille</h1>
+<h2>Positionner des éléments de grille en pratique</h2>
+<h3>Positionner les éléments de grille en utilisant les lignes des grilles</h3>
+<h4>grid-column-start: w;
+    grid-column-end: x;
+    grid-row-start: y;
+    grid-row-end: z;</h4>
+<div class="conteneur-grid_3">
+    <div class="d_2 g1">1</div>
+    <div class="d_2 g2">2</div>
+    <div class="d_2 g3">3</div>
+    <div class="d_2 g4">4</div>
+    <div class="d_2 g5">5</div>
+</div>
+<h4>Sans -end</h4>
+<div class="conteneur-grid_3">
+    <div class="d_2 g11">1</div>
+    <div class="d_2 g12">2</div>
+    <div class="d_2 g13">3</div>
+    <div class="d_2 g14">4</div>
+    <div class="d_2 g15">5</div>
+</div>
+<h4>Nommer les lignes pour positionner les éléments</h4>
+<div class="conteneur-grid_32">
+    <div class="d_2 g21">1</div>
+    <div class="d_2 g22">2</div>
+    <div class="d_2 g23">3</div>
+    <div class="d_2 g24">4</div>
+    <div class="d_2 g25">5</div>
+</div>
+<h4>grid-row & grid-column</h4>
+<div class="conteneur-grid_32">
+    <div class="d_2 g31">1</div>
+    <div class="d_2 g32">2</div>
+    <div class="d_2 g33">3</div>
+    <div class="d_2 g34">4</div>
+    <div class="d_2 g35">5</div>
+</div>
+<h3>Positionner les éléments en utilisant les zones des grilles</h3>
+<h4>Position A(x1,y1);B(x2,y2)</h4>
+<div class="conteneur-grid_34">
+    <div class="d_2 g41">1</div>
+    <div class="d_2 g42">2</div>
+    <div class="d_2 g43">3</div>
+    <div class="d_2 g44">4</div>
+    <div class="d_2 g45">5</div>
+</div>
+<h4>Nommer des zones pour positionner les éléments</h4>
+<div class="conteneur-grid_35">
+    <div class="d_2 g51">1</div>
+    <div class="d_2 g52">2</div>
+    <div class="d_2 g53">3</div>
+    <div class="d_2 g54">4</div>
+    <div class="d_2 g55">5</div>
+</div>
+<h4>Lignes nommées et zones implicites</h4>
+<div class="conteneur-grid_36">
+    <div class="d_2 g61">1</div>
+</div>
+<h4>Zones nommées et lignes implicites</h4>
+<div class="conteneur-grid_37">
+    <div class="d_2 g71">1</div>
+    <div class="d_2 g72">2</div>
+</div>
+<div class="conteneur-grid_38">
+    <div class="d_2 g81">1</div>
+    <div class="d_2 g82">2</div>
+</div>
+<h2>Contrôler le positionnement automatique des éléments dans la grille</h2>
+<h3>Mélange de positionnement explicite et implicite</h3>
+<div class="conteneur-grid_39">
+    <div class="d_2 g91">1</div>
+    <div class="d_2 g92">2</div>
+    <div class="d_2 g93">3</div>
+    <div class="d_2 g94">4</div>
+    <div class="d_2 g95">5</div>
+</div>
+<h3>Placer les éléments automatiquement en colonne</h3>
+<div class="conteneur-grid_310">
+    <div class="d_2 g101">1</div>
+    <div class="d_2 g102">2</div>
+    <div class="d_2 g103">3</div>
+    <div class="d_2 g104">4</div>
+    <div class="d_2 g105">5</div>
+</div>
+<h2>Contrôler le chevauchement des éléments dans une grille</h2>
+<div class="conteneur-grid_311">
+    <div class="d_2 g111">1</div>
+    <div class="d_2 g112">2</div>
+    <div class="d_2 g113">3</div>
+    <div class="d_2 g114">4</div>
+    <div class="d_2 g115">5</div>
+</div>
+<div class="conteneur-grid_311 grille2">
+    <div class="d_2 g111">1</div>
+    <div class="d_2 g112">2</div>
+    <div class="d_2 g113">3</div>
+    <div class="d_2 g114">4</div>
+    <div class="d_2 g115">5</div>
+</div>
+<h1>82. Aligner et espacer les éléments de grille</h1>
+<h2>Aligner les éléments ou les pistes d’une grille par rapport à l’axe de bloc</h2>
+<h4>align-items: stretch</h4>
+<div class="conteneur-grid_201 alignitemsstretch">
+    <div class="d_2 g201">1</div>
+    <div class="d_2 g202">2</div>
+    <div class="d_2 g203">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h4>align-items: start</h4>
+<div class="conteneur-grid_201 alignitemsstart">
+    <div class="d_2 g201">1</div>
+    <div class="d_2 g202">2</div>
+    <div class="d_2 g203">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h4>align-items: center</h4>
+<div class="conteneur-grid_201 alignitemscenter">
+    <div class="d_2 g201">1</div>
+    <div class="d_2 g202">2</div>
+    <div class="d_2 g203">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h4>align-items: stretch + align-self</h4>
+<div class="conteneur-grid_201 alignitemsstretch">
+    <div class="d_2 g201 alignselfstart">1</div>
+    <div class="d_2 g202 alignselfcenter">2</div>
+    <div class="d_2 g203 alignselfend">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h4>align-items: start + align-self</h4>
+<div class="conteneur-grid_201 alignitemsstart">
+    <div class="d_2 g201 alignselfstart">1</div>
+    <div class="d_2 g202 alignselfcenter">2</div>
+    <div class="d_2 g203 alignselfend">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h4>align-items: center + align-self</h4>
+<div class="conteneur-grid_201 alignitemscenter">
+    <div class="d_2 g201 alignselfstart">1</div>
+    <div class="d_2 g202 alignselfcenter">2</div>
+    <div class="d_2 g203 alignselfend">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h3>align-content</h3>
+<h4>align-items: center + align-self + align-content: start</h4>
+<div class="conteneur-grid_202 aligncontentstart">
+    <div class="d_2 g201 alignselfstart">1</div>
+    <div class="d_2 g202 alignselfcenter">2</div>
+    <div class="d_2 g203 alignselfend">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h4>align-items: center + align-self + align-content: end</h4>
+<div class="conteneur-grid_202 aligncontentend">
+    <div class="d_2 g201 alignselfstart">1</div>
+    <div class="d_2 g202 alignselfcenter">2</div>
+    <div class="d_2 g203 alignselfend">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h4>align-items: center + align-self + align-content: center</h4>
+<div class="conteneur-grid_202 aligncontentcenter">
+    <div class="d_2 g201 alignselfstart">1</div>
+    <div class="d_2 g202 alignselfcenter">2</div>
+    <div class="d_2 g203 alignselfend">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h4>align-items: center + align-self + align-content: stretch</h4>
+<div class="conteneur-grid_202 aligncontentstretch">
+    <div class="d_2 g201 alignselfstart">1</div>
+    <div class="d_2 g202 alignselfcenter">2</div>
+    <div class="d_2 g203 alignselfend">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h4>align-items: center + align-self + align-content: evenly</h4>
+<div class="conteneur-grid_202 aligncontentevenly">
+    <div class="d_2 g201 alignselfstart">1</div>
+    <div class="d_2 g202 alignselfcenter">2</div>
+    <div class="d_2 g203 alignselfend">3</div>
+    <div class="d_2 g204">4</div>
+    <div class="d_2 g205">5</div>
+</div>
+<h2>Aligner les éléments ou les pistes d’une grille par rapport à l’axe en ligne</h2>
+<h3>justify-items</h3>
+<h4>justify-items: stretch</h4>
+<div class="conteneur-grid_211 justifyitemsstretch">
+    <div class="d_2 g211">1</div>
+    <div class="d_2 g212">2</div>
+    <div class="d_2 g213">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h4>justify-items: start</h4>
+<div class="conteneur-grid_211 justifyitemsstart">
+    <div class="d_2 g211">1</div>
+    <div class="d_2 g212">2</div>
+    <div class="d_2 g213">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h4>justify-items: center</h4>
+<div class="conteneur-grid_211 justifyitemscenter">
+    <div class="d_2 g211">1</div>
+    <div class="d_2 g212">2</div>
+    <div class="d_2 g213">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h3>justify-self</h3>
+<h4>justify-self: stretch</h4>
+<div class="conteneur-grid_211 justifyitemsstretch">
+    <div class="d_2 g211 justifyselfstart">1</div>
+    <div class="d_2 g212 justifyselfcenter">2</div>
+    <div class="d_2 g213 justifyselfend">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h4>justify-self: start</h4>
+<div class="conteneur-grid_211 justifyitemsstart">
+    <div class="d_2 g211 justifyselfstart">1</div>
+    <div class="d_2 g212 justifyselfcenter">2</div>
+    <div class="d_2 g213 justifyselfend">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h4>justify-self: center</h4>
+<div class="conteneur-grid_211 justifyitemscenter">
+    <div class="d_2 g211 justifyselfstart">1</div>
+    <div class="d_2 g212 justifyselfcenter">2</div>
+    <div class="d_2 g213 justifyselfend">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h3>justify-content</h3>
+<h4>justify-content: start</h4>
+<div class="conteneur-grid_212 justifycontentstart">
+    <div class="d_2 g211 justifyselfstart">1</div>
+    <div class="d_2 g212 justifyselfcenter">2</div>
+    <div class="d_2 g213 justifyselfend">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h4>justify-content: end</h4>
+<div class="conteneur-grid_212 justifycontentend">
+    <div class="d_2 g211 justifyselfstart">1</div>
+    <div class="d_2 g212 justifyselfcenter">2</div>
+    <div class="d_2 g213 justifyselfend">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h4>justify-content: center</h4>
+<div class="conteneur-grid_212 justifycontentcenter">
+    <div class="d_2 g211 justifyselfstart">1</div>
+    <div class="d_2 g212 justifyselfcenter">2</div>
+    <div class="d_2 g213 justifyselfend">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h4>justify-content: stretch</h4>
+<div class="conteneur-grid_212 justifycontentstretch">
+    <div class="d_2 g211 justifyselfstart">1</div>
+    <div class="d_2 g212 justifyselfcenter">2</div>
+    <div class="d_2 g213 justifyselfend">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h4>justify-content: evenly</h4>
+<div class="conteneur-grid_212 justifycontentevenly">
+    <div class="d_2 g211 justifyselfstart">1</div>
+    <div class="d_2 g212 justifyselfcenter">2</div>
+    <div class="d_2 g213 justifyselfend">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h2>Propriétés d’alignement raccourcies</h2>
+<h5>place-items : notation raccourcie de align-items et justify-items</h5>
+<h5>place-self : notation raccourcie de align-self et justify-self</h5>
+<h5>place-content : notation raccourcie de align-content et justify-content</h5>
+<div class="conteneur-grid_213 placeitems placecontent">
+    <div class="d_2 g211 placeself">1</div>
+    <div class="d_2 g212 placeself">2</div>
+    <div class="d_2 g213">3</div>
+    <div class="d_2 g214">4</div>
+    <div class="d_2 g215">5</div>
+</div>
+<h2>Définir les tailles des gouttières pour espacer les éléments de grille</h2>
+<div class="conteneur-grid_214">
+    <div class="d_2 g241">1</div>
+    <div class="d_2 g242">2</div>
+    <div class="d_2 g243">3</div>
+    <div class="d_2 g244">4</div>
+    <div class="d_2 g245">5</div>
+</div>
+<div class="conteneur-grid_214 grille24">
+    <div class="d_2 g241">1</div>
+    <div class="d_2 g242">2</div>
+    <div class="d_2 g243">3</div>
+    <div class="d_2 g244">4</div>
+    <div class="d_2 g245">5</div>
+</div>
+
+
 </body>
 </html>
